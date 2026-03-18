@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LoneRooster Account Deletion</title>
+    <meta
+      name="description"
+      content="How to request deletion of your LoneRooster account and associated data."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #fdf8f3;
+        --card: #fffaf3;
+        --border: rgba(43, 42, 40, 0.12);
+        --text: #2b2a28;
+        --muted: rgba(43, 42, 40, 0.72);
+        --accent: #c9553d;
+        --accent-dark: #a64531;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top right, rgba(233, 168, 81, 0.18), transparent 28%),
+          linear-gradient(180deg, #fffdf9 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      main {
+        width: min(760px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0 64px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(201, 85, 61, 0.1);
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 18px 0 12px;
+        font-size: clamp(32px, 6vw, 48px);
+        line-height: 1.05;
+      }
+
+      .lede {
+        margin: 0 0 28px;
+        max-width: 60ch;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 24px;
+        box-shadow: 0 18px 40px rgba(43, 42, 40, 0.06);
+      }
+
+      .card + .card {
+        margin-top: 18px;
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: 20px;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 18px;
+        border-radius: 14px;
+        border: 1px solid var(--accent);
+        background: var(--accent);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .fine-print {
+        margin-top: 28px;
+        font-size: 14px;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+        font-size: 0.95em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span class="eyebrow">LoneRooster Support</span>
+      <h1>Request account deletion</h1>
+      <p class="lede">
+        To request deletion of your LoneRooster account and associated data,
+        email <strong>support@lonerooster.com</strong> from the email address
+        tied to your account, or include that email in your message.
+      </p>
+
+      <section class="card">
+        <h2>How to request deletion</h2>
+        <ul>
+          <li>Email <strong>support@lonerooster.com</strong>.</li>
+          <li>Use the subject line <code>LoneRooster Account Deletion Request</code>.</li>
+          <li>Include the email address connected to your LoneRooster account.</li>
+          <li>Include your organization name if your account belongs to a shared workspace.</li>
+        </ul>
+        <div class="actions">
+          <a
+            class="button"
+            href="mailto:support@lonerooster.com?subject=LoneRooster%20Account%20Deletion%20Request"
+          >
+            Email support
+          </a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>What we delete</h2>
+        <p>
+          Once we verify the request, we will work to delete the account data
+          associated with your LoneRooster profile, which may include account
+          details, schedules, preferences, projects you solely control,
+          uploaded receipts, payment photos, project photos, memos, and other
+          related records stored for your use of the app.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>What may be retained</h2>
+        <p>
+          If data is part of a shared organization, is needed to protect other
+          collaborators, or must be retained for security, fraud prevention, or
+          legal compliance, we may keep limited records until the request is
+          fully resolved. Backup copies may also remain for a limited period
+          before they expire from our systems.
+        </p>
+      </section>
+
+      <p class="fine-print">
+        Questions about your account or deletion requests can be sent to
+        <a href="mailto:support@lonerooster.com">support@lonerooster.com</a>.
+      </p>
+    </main>
+  </body>
+  </html>
