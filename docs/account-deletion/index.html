@@ -6,7 +6,7 @@
     <title>LoneRooster Account Deletion</title>
     <meta
       name="description"
-      content="How to request deletion of your LoneRooster account and associated data."
+      content="Information about deleting your LoneRooster account and what data is removed."
     />
     <style>
       :root {
@@ -89,30 +89,25 @@
         line-height: 1.6;
       }
 
+      p {
+        margin: 0 0 12px;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
       ul {
         margin: 0;
         padding-left: 20px;
       }
 
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 20px;
+      li {
+        margin-bottom: 8px;
       }
 
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 48px;
-        padding: 0 18px;
-        border-radius: 14px;
-        border: 1px solid var(--accent);
-        background: var(--accent);
-        color: #fff;
-        font-weight: 700;
-        text-decoration: none;
+      li:last-child {
+        margin-bottom: 0;
       }
 
       .fine-print {
@@ -120,66 +115,66 @@
         font-size: 14px;
       }
 
-      code {
-        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
-        font-size: 0.95em;
+      strong {
+        color: var(--text);
       }
     </style>
   </head>
   <body>
     <main>
       <span class="eyebrow">LoneRooster Support</span>
-      <h1>Request account deletion</h1>
+      <h1>Account deletion</h1>
       <p class="lede">
-        To request deletion of your LoneRooster account and associated data,
-        email <strong>support@lonerooster.com</strong> from the email address
-        tied to your account, or include that email in your message.
+        You can delete your LoneRooster account directly from the app.
+        Go to <strong>Profile &gt; Account &amp; Data &gt; Delete Account</strong>.
       </p>
 
       <section class="card">
-        <h2>How to request deletion</h2>
-        <ul>
-          <li>Email <strong>support@lonerooster.com</strong>.</li>
-          <li>Use the subject line <code>LoneRooster Account Deletion Request</code>.</li>
-          <li>Include the email address connected to your LoneRooster account.</li>
-          <li>Include your organization name if your account belongs to a shared workspace.</li>
-        </ul>
-        <div class="actions">
-          <a
-            class="button"
-            href="mailto:support@lonerooster.com?subject=LoneRooster%20Account%20Deletion%20Request"
-          >
-            Email support
-          </a>
-        </div>
-      </section>
-
-      <section class="card">
         <h2>What we delete</h2>
-        <p>
-          Once we verify the request, we will work to delete the account data
-          associated with your LoneRooster profile, which may include account
-          details, schedules, preferences, projects you solely control,
-          uploaded receipts, payment photos, project photos, memos, and other
-          related records stored for your use of the app.
-        </p>
+        <p>When you delete your account, we permanently remove:</p>
+        <ul>
+          <li>Your user profile and account settings</li>
+          <li>Your work schedule and preferences</li>
+          <li>Your notification settings and device tokens</li>
+          <li><strong>Organizations you own</strong> and all their data, including:
+            <ul>
+              <li>All projects</li>
+              <li>Expenses and receipt images</li>
+              <li>Payments and income records</li>
+              <li>Voice memos and project photos</li>
+              <li>Time entries and check-ins</li>
+              <li>Change orders</li>
+              <li>Overhead expenses and expense categories</li>
+              <li>All uploaded files and images</li>
+            </ul>
+          </li>
+          <li>Invite codes you created</li>
+          <li>Your check-in history in other organizations</li>
+        </ul>
       </section>
 
       <section class="card">
         <h2>What may be retained</h2>
         <p>
-          If data is part of a shared organization, is needed to protect other
-          collaborators, or must be retained for security, fraud prevention, or
-          legal compliance, we may keep limited records until the request is
-          fully resolved. Backup copies may also remain for a limited period
-          before they expire from our systems.
+          If you are a <strong>member</strong> (not owner) of an organization,
+          business records you created in that organization are preserved for
+          the other members. This includes expenses, payments, time entries,
+          memos, and photos. Your user ID remains on these records for
+          historical accuracy, but you will no longer have access to the
+          organization.
+        </p>
+        <p>
+          We may also retain limited records if required for security, fraud
+          prevention, or legal compliance. Backup copies may remain for a
+          limited period before they expire from our systems.
         </p>
       </section>
 
       <p class="fine-print">
-        Questions about your account or deletion requests can be sent to
-        <a href="mailto:support@lonerooster.com">support@lonerooster.com</a>.
+        Deletion is immediate and cannot be undone. If you own organizations
+        with other members, they will lose access to all organization data
+        when you delete your account.
       </p>
     </main>
   </body>
-  </html>
+</html>
