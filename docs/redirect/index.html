@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redirecting to LoneRooster...</title>
+  <style>
+    :root {
+      --bg: #fdf8f3;
+      --text: #2b2a28;
+      --accent: #c9553d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px;
+    }
+    .container {
+      text-align: center;
+      max-width: 400px;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 0 0 12px;
+    }
+    p {
+      font-size: 16px;
+      color: rgba(43, 42, 40, 0.7);
+      margin: 0 0 24px;
+      line-height: 1.5;
+    }
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(201, 85, 61, 0.2);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="spinner" id="spinner"></div>
+    <h1 id="title">Opening LoneRooster...</h1>
+    <p id="message">You should be redirected to the app automatically.</p>
+    <a href="#" class="button hidden" id="openButton">Open LoneRooster</a>
+  </div>
+
+  <script>
+    (function() {
+      // Get URL parameters
+      const params = new URLSearchParams(window.location.search);
+      const status = params.get('status') || 'success';
+      const env = params.get('env') || 'prod';
+
+      // Determine app scheme
+      const scheme = env === 'dev' ? 'loneroosterdev' : 'lonerooster';
+      const deepLink = scheme + '://subscription-' + status;
+
+      // Try to open the app
+      const openApp = function() {
+        window.location.href = deepLink;
+      };
+
+      // Show manual button after delay (in case auto-redirect fails)
+      setTimeout(function() {
+        document.getElementById('spinner').classList.add('hidden');
+        document.getElementById('title').textContent = 'Return to LoneRooster';
+        var message = 'Tap below to return to the app.';
+        if (status === 'success') {
+          message = 'Your subscription is being activated! Tap below to return to the app.';
+        } else if (status === 'portal-return') {
+          message = 'Tap below to return to the app.';
+        }
+        document.getElementById('message').textContent = message;
+        var btn = document.getElementById('openButton');
+        btn.classList.remove('hidden');
+        btn.href = deepLink;
+      }, 1500);
+
+      // Try auto-redirect immediately
+      openApp();
+    })();
+  </script>
+</body>
+</html>
